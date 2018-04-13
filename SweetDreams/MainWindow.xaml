@@ -1,0 +1,53 @@
+﻿<Window x:Class="SweetDreams.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SweetDreams"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="400">
+    <Grid 
+        Background="Pink">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="1.1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="Pink">
+            <Label Content="♥SWEET DREAMS♥"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Foreground="#fff">
+            </Label>
+        </Border>
+
+        <Menu Grid.Row="1" 
+              Background="Pink" 
+              Foreground="#fff"
+              FontSize="14"
+              FontWeight="Bold"
+              Name="MainMenu">
+            <MenuItem Name="HomePage" Header="   HOME   |" Click="HomePage_Click"></MenuItem>
+            <MenuItem Name="Register" Header="REGISTER    |" Click="Register_Click"></MenuItem>
+            <MenuItem Name="FindMenu" Header="FIND SOULMATE    |" Visibility="Collapsed" Click="FindMenu_Click"></MenuItem>
+        </Menu>
+
+        <Frame Grid.Row="2"               
+               Name="MFrame"
+               NavigationUIVisibility="Hidden">
+        </Frame>
+
+        <Border Grid.Row="3" Background="Pink">
+            <Label Content="©Copy right"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="14"
+                   FontWeight="Bold"
+                   Foreground="#fff">
+            </Label>
+        </Border>
+    </Grid>
+</Window>
